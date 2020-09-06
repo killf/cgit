@@ -23,7 +23,13 @@ git clone https://github.com/killf/cgit.git && sudo ./cgit/install.sh
 
 ### 二、使用方法
 
-使用方法git与一样，只需将命令换算成cgit即可，如下：
+cgit运行时与需要使用git，因此需要先安装git，如果需要使用其他路径的git，可配置环境变量`GIT`，如：
+
+```shell script
+export GIT=/usr/bin/git
+```
+
+cgit的使用方法git与一样，事实上内部使用的也是git，使用时只需将命令替换成cgit即可，如下：
 
 ```
 cgit clone https://github.com/killf/cgit.git

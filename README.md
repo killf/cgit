@@ -23,7 +23,3 @@ cgit clone https://github.com/killf/cgit.git
 ![](doc/img1.jpg)
 
 ![](doc/img2.jpg)
-
-
-
-

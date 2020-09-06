@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.17)
-project(cgit C)
+project(cgit CXX)
 
-set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 11)
 
-add_executable(cgit src/main.c src/cgit.c)
+add_executable(cgit src/main.cpp src/cgit.cpp src/string.hpp)

@@ -16,6 +16,11 @@ sudo wget http://cgit.killf.info/cgit_linux_latest -O /usr/local/bin/cgit && sud
 sudo wget http://cgit.killf.info/cgit_mac_latest -O /usr/local/bin/cgit && sudo chmod 755 /usr/local/bin/cgit
 ```
 
+**arm下安装**
+```shell script
+sudo wget http://cgit.killf.info/cgit_arm_latest -O /usr/local/bin/cgit && sudo chmod 755 /usr/local/bin/cgit
+```
+
 **编译安装**
 ```shell script
 git clone https://github.com/killf/cgit.git && sudo ./cgit/install.sh

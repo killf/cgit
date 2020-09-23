@@ -21,6 +21,11 @@ sudo wget http://cgit.killf.info/cgit_mac_latest -O /usr/local/bin/cgit && sudo 
 sudo wget http://cgit.killf.info/cgit_arm_latest -O /usr/local/bin/cgit && sudo chmod 755 /usr/local/bin/cgit
 ```
 
+**window下安装**
+
+* 点击[下载](http://cgit.killf.info/cgit.exe)链接，将程序放到你喜欢的目录下，然后将该路径配置`PATH`变量下
+* 需要配置环境变量`GIT`，否则将不能使用
+
 **编译安装**
 ```shell script
 git clone https://github.com/killf/cgit.git && sudo ./cgit/install.sh

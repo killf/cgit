@@ -8,17 +8,17 @@
 
 **linux下安装**
 ```shell script
-sudo wget http://cgit.killf.info/cgit_linux_latest -O /usr/local/bin/cgit && sudo chmod 755 /usr/local/bin/cgit
+sudo wget http://cgit.killf.info:8080/cgit_linux_latest -O /usr/local/bin/cgit && sudo chmod 755 /usr/local/bin/cgit
 ```
 
 **mac下安装**
 ```shell script
-sudo wget http://cgit.killf.info/cgit_mac_latest -O /usr/local/bin/cgit && sudo chmod 755 /usr/local/bin/cgit
+sudo wget http://cgit.killf.info:8080/cgit_mac_latest -O /usr/local/bin/cgit && sudo chmod 755 /usr/local/bin/cgit
 ```
 
 **arm下安装**
 ```shell script
-sudo wget http://cgit.killf.info/cgit_arm_latest -O /usr/local/bin/cgit && sudo chmod 755 /usr/local/bin/cgit
+sudo wget http://cgit.killf.info:8080/cgit_arm_latest -O /usr/local/bin/cgit && sudo chmod 755 /usr/local/bin/cgit
 ```
 
 **window下安装**

@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/57218/Desktop/rxh1999/cgit/src/cgit.cpp
+cgit.hpp
+C:/Users/57218/Desktop/rxh1999/cgit/src/cgit.hpp
+direct.h
+-
+unistd.h
+-
+memory.h
+-
+iostream
+-
+sstream
+-
+
+C:/Users/57218/Desktop/rxh1999/cgit/src/cgit.hpp
+vector
+-
+map
+-
+string.hpp
+C:/Users/57218/Desktop/rxh1999/cgit/src/string.hpp
+
+C:/Users/57218/Desktop/rxh1999/cgit/src/main.cpp
+process.h
+-
+unistd.h
+-
+vector
+-
+string.hpp
+C:/Users/57218/Desktop/rxh1999/cgit/src/string.hpp
+cgit.hpp
+C:/Users/57218/Desktop/rxh1999/cgit/src/cgit.hpp
+
+C:/Users/57218/Desktop/rxh1999/cgit/src/string.hpp
+string
+-
+

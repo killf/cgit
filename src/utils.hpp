@@ -4,7 +4,7 @@
 namespace cgit {
     const char *get_env(const char *name, const char *default_value);
 
-    int execv(const string &file_name, char const *const *arguments);
+    int exec(const string &file_name, char *const *arguments);
 
     int cd(const string &path);
 }

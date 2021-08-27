@@ -13,5 +13,5 @@ int main(int argc, char **argv) {
     }
 
     if (argc > 2 && args[1] == "clone") return cgit_clone(args);
-    else return execv(get_git_file(), argv);
+    else return exec(get_git_file(false), argv);
 }

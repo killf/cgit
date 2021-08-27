@@ -7,7 +7,7 @@
 #include "string.hpp"
 
 namespace cgit {
-    string get_git_file();
+    string get_git_file(bool q = true);
 
     int cgit_clone(std::vector<string> &argv);
 }

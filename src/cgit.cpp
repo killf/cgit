@@ -30,7 +30,7 @@ namespace cgit {
         return ss.str();
     }
 
-    string get_git_file() {
+    string get_git_file(bool q) {
         auto git = get_env("GIT", DEFAULT_GIT_FILE);
         if (git == nullptr) {
             printf("please set the environment variable `GIT`.");
@@ -38,7 +38,7 @@ namespace cgit {
         }
 
         string git_str(git);
-        if (git_str[0] != '"') git_str = '"' + git_str + '"';
+        if (q && git_str[0] != '"') git_str = '"' + git_str + '"';
 
         return git_str;
     }

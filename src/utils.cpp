@@ -19,7 +19,7 @@ namespace cgit {
         return err == 0 && file != nullptr ? file : default_value;
     }
 
-    int execv(const string &file_name, char const *const *arguments) {
+    int exec(const string &file_name, char *const *arguments) {
         return _execv(file_name.c_str(), arguments);
     }
 
@@ -32,7 +32,7 @@ namespace cgit {
         return file ? file : default_value;
     }
 
-    int execv(const string &file_name, char const* const* arguments){
+    int exec(const string &file_name, char *const* arguments){
         return execv(file_name.c_str(), arguments);
     }
 

@@ -1,4 +1,8 @@
+#ifdef WIN32
+#include <process.h>
+#else
 #include <unistd.h>
+#endif
 #include <vector>
 
 #include "string.hpp"
@@ -15,5 +19,9 @@ int main(int argc, char **argv) {
     if (argc > 2 && args[1] == "clone")
         return cgit_clone(args);
     else
+#ifdef WIN32
+        return _execv(get_git_file(), argv);
+#else
         return execv(get_git_file(), argv);
+#endif
 }

@@ -1,13 +1,19 @@
 #include "cgit.hpp"
 
+#ifdef WIN32
+#include <direct.h>
+#else
 #include <unistd.h>
+#endif
 #include <memory.h>
 #include <iostream>
 #include <sstream>
 
 #define DEFAULT_GIT_FILE "/usr/bin/git"
 #define DEFAULT_GITHUB_URL "https://github.com/"
-#define DEFAULT_MIRROR_URL "https://github.com.cnpmjs.org/"
+// slow
+// #define DEFAULT_MIRROR_URL "https://github.com.cnpmjs.org/"
+#define DEFAULT_MIRROR_URL "https://hub.fastgit.org/"
 
 namespace cgit {
     using namespace std;
@@ -15,16 +21,28 @@ namespace cgit {
     static string create_cmd(std::vector<string> &args) {
         std::ostringstream ss;
         for (const auto &s:args) {
+#ifdef WIN32
+            ss << s << " ";
+#else
             ss << "\"" << s << "\" ";
+#endif
         }
         return ss.str();
     }
 
+#ifdef WIN32
+    const char *get_git_file() {
+        char *file;
+        size_t len;
+        errno_t err = _dupenv_s(&file, &len, "GIT");
+        return err ?  DEFAULT_GIT_FILE : file ;
+    }
+#else
     const char *get_git_file() {
         char *file = getenv("GIT");
         return file ? file : DEFAULT_GIT_FILE;
     }
-
+#endif
     int cgit_clone(vector<string> &args) {
         // 1.git clone https://github.com.cnpmjs.org/killf/cgit.git
         string old_url, new_url, folder_name;
@@ -49,7 +67,11 @@ namespace cgit {
         if (err != 0 || new_url.empty() || folder_name.empty())return err;
 
         // 2.cd cgit
+#ifdef WIN32
+        err = _chdir(folder_name.c_str());
+#else
         err = chdir(folder_name.c_str());
+#endif
         if (err != 0)return err;
 
         // 3.git remote set-url origin https://github.com/killf/cgit.git

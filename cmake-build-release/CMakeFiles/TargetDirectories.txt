@@ -1,6 +1,0 @@
-C:/Users/57218/Desktop/rxh1999/cgit/cmake-build-release/CMakeFiles/cgit.dir
-C:/Users/57218/Desktop/rxh1999/cgit/cmake-build-release/CMakeFiles/install/local.dir
-C:/Users/57218/Desktop/rxh1999/cgit/cmake-build-release/CMakeFiles/install.dir
-C:/Users/57218/Desktop/rxh1999/cgit/cmake-build-release/CMakeFiles/edit_cache.dir
-C:/Users/57218/Desktop/rxh1999/cgit/cmake-build-release/CMakeFiles/rebuild_cache.dir
-C:/Users/57218/Desktop/rxh1999/cgit/cmake-build-release/CMakeFiles/list_install_components.dir

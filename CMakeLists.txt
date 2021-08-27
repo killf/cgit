@@ -9,7 +9,7 @@ IF (WIN32)
 ELSE ()
 set(CMAKE_CXX_FLAGS "-static ${CMAKE_CXX_FLAGS}")
 ENDIF ()
-add_executable(cgit src/main.cpp src/cgit.cpp src/string.hpp)
+add_executable(cgit src/main.cpp src/cgit.cpp src/string.hpp src/utils.hpp src/utils.cpp)
 
 message(STATUS ${CMAKE_INSTALL_BINDIR})
 

@@ -13,7 +13,7 @@
 #endif
 
 #define DEFAULT_GITHUB_URL "https://github.com/"
-#define DEFAULT_MIRROR_URL "https://github.com.cnpmjs.org/"
+#define DEFAULT_MIRROR_URL "https://gitclone.com/github.com/"
 
 namespace cgit {
     using namespace std;
@@ -54,7 +54,7 @@ namespace cgit {
         string git_file = get_git_file();
         string mirror_url = get_cgit_mirror();
 
-        // 1.git clone https://github.com.cnpmjs.org/killf/cgit.git
+        // 1.git clone https://gitclone.com/github.com/killf/cgit.git
         string old_url, new_url, folder_name;
         for (size_t i = 2; i < args.size(); i++) {
             if (args[i].startsWith(DEFAULT_GITHUB_URL)) {
